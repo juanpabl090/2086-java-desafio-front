@@ -5,8 +5,8 @@ const fichaDescripcion = document.getElementById('ficha-descripcion');
 
 function cargarInfoSerie() {
   getDatos(`/series/frases`)
-      .then(data => {
-        fichaDescripcion.innerHTML = `
+    .then(data => {
+      fichaDescripcion.innerHTML = `
               <img src="${data.poster}" alt="${data.titulo}" />
               <div>
                   <h2>${data.titulo}</h2>
@@ -16,10 +16,10 @@ function cargarInfoSerie() {
                   </div>
               </div>
           `;
-      })
-      .catch(error => {
-          console.error('Error al obtener las informaciones de la serie:', error);
-      });
+    })
+    .catch(error => {
+      console.error('Error al obtener las informaciones de la serie:', error);
+    });
 }
 
 
